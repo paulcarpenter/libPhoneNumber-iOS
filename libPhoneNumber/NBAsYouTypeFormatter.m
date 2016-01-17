@@ -819,7 +819,7 @@
                 }
             }
             else {
-                _isSuccessfulFormatting = NO;
+                _isSuccessfulFormatting = self.nationalNumber_.length <= self.MIN_LEADING_DIGITS_LENGTH_;
                 return [self attemptToChooseFormattingPattern_];
             }
     }
