@@ -743,8 +743,9 @@
         }
         else if ([self attemptToExtractIdd_]) {
             if ([self attemptToExtractCountryCallingCode_]) {
-                _isSuccessfulFormatting = YES;
-                return [self attemptToChoosePatternWithPrefixExtracted_];
+                NSString *result = [self attemptToChoosePatternWithPrefixExtracted_];
+                _isSuccessfulFormatting = self.ableToFormat_;
+                return result;
             }
         }
         else if ([self ableToExtractLongerNdd_]) {
